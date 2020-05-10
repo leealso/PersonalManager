@@ -1,12 +1,12 @@
-﻿using CleanArchitecture.Application.TodoItems.Commands.CreateTodoItem;
-using CleanArchitecture.Application.TodoItems.Commands.DeleteTodoItem;
-using CleanArchitecture.Application.TodoItems.Commands.UpdateTodoItem;
-using CleanArchitecture.Application.TodoItems.Commands.UpdateTodoItemDetail;
+﻿using PersonalManager.Application.TodoItems.Commands.CreateTodoItem;
+using PersonalManager.Application.TodoItems.Commands.DeleteTodoItem;
+using PersonalManager.Application.TodoItems.Commands.UpdateTodoItem;
+using PersonalManager.Application.TodoItems.Commands.UpdateTodoItemDetail;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace CleanArchitecture.WebUI.Controllers
+namespace PersonalManager.WebUI.Controllers
 {
     [Authorize]
     public class TodoItemsController : ApiController

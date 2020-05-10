@@ -1,9 +1,9 @@
-using CleanArchitecture.Application;
-using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Infrastructure;
-using CleanArchitecture.Infrastructure.Persistence;
-using CleanArchitecture.WebUI.Filters;
-using CleanArchitecture.WebUI.Services;
+using PersonalManager.Application;
+using PersonalManager.Application.Common.Interfaces;
+using PersonalManager.Infrastructure;
+using PersonalManager.Infrastructure.Persistence;
+using PersonalManager.WebUI.Filters;
+using PersonalManager.WebUI.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -15,7 +15,7 @@ using NSwag;
 using NSwag.Generation.Processors.Security;
 using System.Linq;
 
-namespace CleanArchitecture.WebUI
+namespace PersonalManager.WebUI
 {
     public class Startup
     {

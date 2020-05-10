@@ -1,14 +1,14 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Infrastructure.Files;
-using CleanArchitecture.Infrastructure.Identity;
-using CleanArchitecture.Infrastructure.Persistence;
-using CleanArchitecture.Infrastructure.Services;
+﻿using PersonalManager.Application.Common.Interfaces;
+using PersonalManager.Infrastructure.Files;
+using PersonalManager.Infrastructure.Identity;
+using PersonalManager.Infrastructure.Persistence;
+using PersonalManager.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CleanArchitecture.Infrastructure
+namespace PersonalManager.Infrastructure
 {
     public static class DependencyInjection
     {

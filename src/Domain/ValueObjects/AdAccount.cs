@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Domain.Common;
-using CleanArchitecture.Domain.Exceptions;
+﻿using PersonalManager.Domain.Common;
+using PersonalManager.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 
-namespace CleanArchitecture.Domain.ValueObjects
+namespace PersonalManager.Domain.ValueObjects
 {
     public class AdAccount : ValueObject
     {

@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Application.Common.Interfaces
+﻿namespace PersonalManager.Application.Common.Interfaces
 {
     public interface ICurrentUserService
     {

@@ -1,10 +1,10 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Domain.Entities;
+﻿using PersonalManager.Application.Common.Interfaces;
+using PersonalManager.Domain.Entities;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CleanArchitecture.Application.TodoLists.Commands.CreateTodoList
+namespace PersonalManager.Application.TodoLists.Commands.CreateTodoList
 {
     public partial class CreateTodoListCommand : IRequest<int>
     {

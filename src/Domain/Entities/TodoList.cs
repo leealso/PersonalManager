@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Domain.Common;
+﻿using PersonalManager.Domain.Common;
 using System.Collections.Generic;
 
-namespace CleanArchitecture.Domain.Entities
+namespace PersonalManager.Domain.Entities
 {
     public class TodoList : AuditableEntity
     {

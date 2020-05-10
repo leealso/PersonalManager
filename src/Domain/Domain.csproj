@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>CleanArchitecture.Domain</RootNamespace>
-    <AssemblyName>CleanArchitecture.Domain</AssemblyName>
+    <RootNamespace>PersonalManager.Domain</RootNamespace>
+    <AssemblyName>PersonalManager.Domain</AssemblyName>
   </PropertyGroup>
 
 </Project>

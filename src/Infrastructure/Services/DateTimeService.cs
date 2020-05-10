@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
+﻿using PersonalManager.Application.Common.Interfaces;
 using System;
 
-namespace CleanArchitecture.Infrastructure.Services
+namespace PersonalManager.Infrastructure.Services
 {
     public class DateTimeService : IDateTime
     {

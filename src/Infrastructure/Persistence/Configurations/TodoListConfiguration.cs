@@ -1,9 +1,9 @@
 ﻿
-using CleanArchitecture.Domain.Entities;
+using PersonalManager.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CleanArchitecture.Infrastructure.Persistence.Configurations
+namespace PersonalManager.Infrastructure.Persistence.Configurations
 {
     public class TodoListConfiguration : IEntityTypeConfiguration<TodoList>
     {

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "CleanArchitecture.WebUI": {
+    "PersonalManager.WebUI": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -60,18 +60,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "CleanArchitecture.WebUI:build"
+            "browserTarget": "PersonalManager.WebUI:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "CleanArchitecture.WebUI:build:production"
+              "browserTarget": "PersonalManager.WebUI:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "CleanArchitecture.WebUI:build"
+            "browserTarget": "PersonalManager.WebUI:build"
           }
         },
         "test": {
@@ -132,7 +132,7 @@
         }
       }
     },
-    "CleanArchitecture.WebUI-e2e": {
+    "PersonalManager.WebUI-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -140,7 +140,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "CleanArchitecture.WebUI:serve"
+            "devServerTarget": "PersonalManager.WebUI:serve"
           }
         },
         "lint": {
@@ -155,5 +155,5 @@
       }
     }
   },
-  "defaultProject": "CleanArchitecture.WebUI"
+  "defaultProject": "PersonalManager.WebUI"
 }

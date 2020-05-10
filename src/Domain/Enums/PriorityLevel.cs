@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Domain.Enums
+﻿namespace PersonalManager.Domain.Enums
 {
     public enum PriorityLevel
     {

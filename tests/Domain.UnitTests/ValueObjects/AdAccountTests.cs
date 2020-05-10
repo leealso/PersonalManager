@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Domain.Exceptions;
-using CleanArchitecture.Domain.ValueObjects;
+﻿using PersonalManager.Domain.Exceptions;
+using PersonalManager.Domain.ValueObjects;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace CleanArchitecture.Domain.UnitTests.ValueObjects
+namespace PersonalManager.Domain.UnitTests.ValueObjects
 {
     public class AdAccountTests
     {

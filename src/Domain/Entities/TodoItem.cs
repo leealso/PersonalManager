@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Domain.Common;
-using CleanArchitecture.Domain.Enums;
+﻿using PersonalManager.Domain.Common;
+using PersonalManager.Domain.Enums;
 using System;
 
-namespace CleanArchitecture.Domain.Entities
+namespace PersonalManager.Domain.Entities
 {
     public class TodoItem : AuditableEntity
     {
