@@ -1,0 +1,121 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+          <h1>Categories</h1>
+      </div>
+      <div class="col col-xs-2 text-right my-auto">
+          <button class="btn btn-outline-success" title="Add Category"
+                  (click)="showNewCategoryModal(newCategoryModalTemplate)">
+              <fa-icon [icon]="faPlus"></fa-icon>
+          </button>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+          <p *ngIf="!vm" class="mt-3"><em>Loading...</em></p>
+          <table *ngIf="vm" class="table table-bordered table-hover">
+              <thead>
+                  <tr>
+                      <th scope="col" class="col-xs-1"></th>
+                      <th scope="col" class="col">Category</th>
+                      <th scope="col" class="col-xs-4">Normal Balance</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let category of vm.categories" [ngClass]="{ 'parentCategory':  !isChild(category) }">
+                      <td class="text-center">
+                          <img [src]="category.iconUrl" alt="{{ category.name }}" class="category-icon" [ngClass]="{ 'ml-3':  isChild(category) }">
+                      </td>
+                      <td>
+                          <span [ngClass]="{ 'ml-3':  isChild(category) }">{{ category.name }}</span>
+                      </td>
+                      <td class="text-danger">Credit</td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+    </div>
+
+    <div *ngIf="debug">
+        <pre>{{ vm | json }}</pre>
+    </div>
+
+    <ng-template #categoryOptionsModalTemplate>
+        <div class="modal-header clearfix">
+            <h4 class="modal-title float-left">Category Options</h4>
+            <button type="button" class="close float-right" aria-label="Close" (click)="categoryOptionsModalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-footer">
+            <div class="clearfix">
+                <div class="float-left">
+                    <button class="btn btn-default text-danger" (click)="confirmDeleteCategory(deleteListModalTemplate)">Delete</button>
+                </div>
+                <div class="float-right">
+                    <button class="btn btn-default" (click)="categoryOptionsModalRef.hide()">Cancel</button>
+                    <button class="btn btn-primary" (click)="updateCategoryOptions()">Update</button>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template #deleteListModalTemplate>
+        <div class="modal-header clearfix">
+            <h4 class="modal-title float-left">Delete "{{ selectedCategory?.name }}"?</h4>
+            <button type="button" class="close float-right" aria-label="Close" (click)="deleteCategoryModalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p>All items will be permanently deleted. </p>
+            <div *ngIf="debug">
+                <pre>{{ selectedCategory | json }}</pre>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="text-right">
+                <button type="button" class="btn btn-default" (click)="deleteCategoryModalRef.hide()">Cancel</button>
+                <button type="button" class="btn btn-danger" (click)="deleteCategoryConfirmed()">Delete</button>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template #newCategoryModalTemplate>
+        <div class="modal-header clearfix">
+            <h4 class="modal-title float-left">New Category</h4>
+            <button type="button" class="close float-right" aria-label="Close" (click)="newCategoryCancelled()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Name" [(ngModel)]="newCategoryEditor.name"
+                       [ngClass]="{ 'is-invalid': newCategoryEditor.error }" (keyup.enter)="addCategory()" />
+                <div *ngIf="newCategoryEditor.error" class="invalid-feedback">
+                    {{ newCategoryEditor.error }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name">Icon Url</label>
+                <input type="text" class="form-control" id="uconUrl" placeholder="http://example.com/icon.png" [(ngModel)]="newCategoryEditor.iconUrl"
+                       [ngClass]="{ 'is-invalid': newCategoryEditor.error }" (keyup.enter)="addCategory()" />
+                <div *ngIf="newCategoryEditor.error" class="invalid-feedback">
+                    {{ newCategoryEditor.error }}
+                </div>
+            </div>
+
+            <div *ngIf="debug">
+                <pre>{{ newCategoryEditor | json }}</pre>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="text-right">
+                <button class="btn btn-danger" (click)="newCategoryCancelled()">Cancel</button>
+                <button class="btn btn-success ml-2" (click)="addCategory()">Create</button>
+            </div>
+        </div>
+    </ng-template>
+</div>
+

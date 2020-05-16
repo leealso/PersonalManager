@@ -21,7 +21,7 @@
     <EnvironmentVariables>
       <Variable name="DOTNET_ENVIRONMENT" value="Development" />
     </EnvironmentVariables>
-    <ApplicationURL>http://localhost:5000</ApplicationURL>
+    <ApplicationURL>http://localhost:5003</ApplicationURL>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.0" />
@@ -43,7 +43,6 @@
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
-    <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
@@ -52,6 +51,9 @@
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ClientApp\src\app\categories\" />
+  </ItemGroup>
   <Target Name="NSwag" AfterTargets="Build" Condition="'$(Configuration)' == 'Debug'">
     <Copy SourceFiles="@(Reference)" DestinationFolder="$(OutDir)References" />
     <Exec Command="$(NSwagExe_Core31) run /variables:Configuration=$(Configuration)" />

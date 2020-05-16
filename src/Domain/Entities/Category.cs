@@ -8,7 +8,7 @@ namespace PersonalManager.Domain.Entities
 
         public string Name { get; set; }
 
-        public int ParentId { get; set; }
+        public int? ParentId { get; set; }
 
         public Category Parent { get; set; }
 

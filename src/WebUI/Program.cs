@@ -53,7 +53,7 @@ namespace PersonalManager.WebUI
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                    webBuilder.UseUrls("http://localhost:6001/");
+                    webBuilder.UseUrls("http://localhost:6001");
                 });
     }
 }

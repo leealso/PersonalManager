@@ -30,6 +30,8 @@ namespace PersonalManager.Infrastructure.Persistence
             _dateTime = dateTime;
         }
 
+        public DbSet<Category> Categories { get; set; }
+
         public DbSet<TodoList> TodoLists { get; set; }
 
         public DbSet<TodoItem> TodoItems { get; set; }
@@ -79,11 +81,7 @@ namespace PersonalManager.Infrastructure.Persistence
             }
             finally
             {
-                if (_currentTransaction != null)
-                {
-                    _currentTransaction.Dispose();
-                    _currentTransaction = null;
-                }
+                DisposeTransaction();
             }
         }
 
@@ -95,11 +93,16 @@ namespace PersonalManager.Infrastructure.Persistence
             }
             finally
             {
-                if (_currentTransaction != null)
-                {
-                    _currentTransaction.Dispose();
-                    _currentTransaction = null;
-                }
+                DisposeTransaction();
+            }
+        }
+
+        private void DisposeTransaction()
+        {
+            if (_currentTransaction != null)
+            {
+                _currentTransaction.Dispose();
+                _currentTransaction = null;
             }
         }
 

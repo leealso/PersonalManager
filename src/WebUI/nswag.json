@@ -30,7 +30,7 @@
       "serviceHost": null,
       "serviceBasePath": null,
       "serviceSchemes": [],
-      "infoTitle": "CleanArchitecture API",
+      "infoTitle": "PersonalManager API",
       "infoDescription": null,
       "infoVersion": "1.0.0",
       "documentTemplate": null,
@@ -110,7 +110,7 @@
       "enumNameGeneratorType": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "ClientApp/src/app/CleanArchitecture-api.ts"
+      "output": "ClientApp/src/app/personalmanager-api.ts"
     }
   }
 }

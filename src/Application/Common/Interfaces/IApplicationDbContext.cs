@@ -7,6 +7,8 @@ namespace PersonalManager.Application.Common.Interfaces
 {
     public interface IApplicationDbContext
     {
+        DbSet<Category> Categories { get; set; }
+
         DbSet<TodoList> TodoLists { get; set; }
 
         DbSet<TodoItem> TodoItems { get; set; }

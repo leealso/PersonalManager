@@ -58,7 +58,7 @@ namespace PersonalManager.WebUI
 
             services.AddOpenApiDocument(configure =>
             {
-                configure.Title = "CleanArchitecture API";
+                configure.Title = "Personal Manager API";
                 configure.AddSecurity("JWT", Enumerable.Empty<string>(), new OpenApiSecurityScheme
                 {
                     Type = OpenApiSecuritySchemeType.ApiKey,
